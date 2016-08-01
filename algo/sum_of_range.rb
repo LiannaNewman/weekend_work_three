@@ -3,7 +3,16 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  sum = 0
+  if array[0] < array[1]
+    range = (array[0]..array[1])
+  elsif array[0] > array[1]
+    range = (array[1]..array[0])
+  end
+  range.to_a.each do |n|
+    sum += n
+  end
+  return sum
 end
 
 # Driver code - don't touch anything below this line.
